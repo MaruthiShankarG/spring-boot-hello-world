@@ -3,13 +3,13 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto11  # Example: Using Amazon Corretto 8 as the Java runtime
+      java: corretto11  # Using Amazon Corretto 11 as the Java runtime
     commands:
-      - echo "Installing JDK 11"  # Replace with your JDK installation commands
-      - echo "Setting JDK 11as default"
-      - ./Maven assemble  # Example: Using Gradle for Java project, replace with Maven if applicable
+      - echo "Installing JDK 11"  # Replace with actual JDK installation commands if necessary
+      - echo "Setting JDK 11 as default"
+      - mvn install  # Command to build the Maven project and generate artifacts
 
 artifacts:
   files:
-    - '**/*.jar'  # Assuming your artifacts are JAR files
-  name: java-app-build
+    - '**/*.jar'  # Include all JAR files produced by Maven as artifacts
+  name: java-app-build  # Name for the build artifact
