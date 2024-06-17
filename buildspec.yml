@@ -7,7 +7,7 @@ phases:
     commands:
       - echo "Installing JDK 11"  # Replace with your JDK installation commands
       - echo "Setting JDK 11as default"
-      - ./gradlew assemble  # Example: Using Gradle for Java project, replace with Maven if applicable
+      - ./Maven assemble  # Example: Using Gradle for Java project, replace with Maven if applicable
 
 artifacts:
   files:
