@@ -12,7 +12,6 @@ phases:
       - bundle install --path ./bundle
 
 artifacts:
-  basedirectory: dist/myhelloworld
   files:
     - '**/*'
   name: hello-world-build
