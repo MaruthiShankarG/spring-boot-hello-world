@@ -3,10 +3,10 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto8  # Example: Using Amazon Corretto 8 as the Java runtime
+      java: corretto11  # Example: Using Amazon Corretto 8 as the Java runtime
     commands:
-      - echo "Installing JDK 8"  # Replace with your JDK installation commands
-      - echo "Setting JDK 8 as default"
+      - echo "Installing JDK 11"  # Replace with your JDK installation commands
+      - echo "Setting JDK 11as default"
       - ./gradlew assemble  # Example: Using Gradle for Java project, replace with Maven if applicable
 
 artifacts:
