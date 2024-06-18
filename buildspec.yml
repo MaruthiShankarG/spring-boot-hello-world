@@ -11,7 +11,7 @@ phases:
 
 artifacts:
   files:
-    - '**/*.jar'  # Include all JAR files produced by Maven as artifacts
+    - 'dist/myjavaapp/**/*.jar'  # Include all JAR files produced by Maven as artifacts
     - appspec.yml
-    - '**/*.sh'
+    - 'Deploy_files/**/*'
   name: java-app-build  # Name for the build artifact
