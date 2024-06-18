@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /myjavaapp
+  - source: /
     destination: /var/www/myjavaapp
 permissions:
   - object: /var/www/myjavaapp
