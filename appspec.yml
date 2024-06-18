@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: dist/myjavaapp
+  - source: /myjavaapp
     destination: /var/www/myjavaapp
 permissions:
   - object: /var/www/myjavaapp
@@ -14,5 +14,5 @@ permissions:
       - directory
 hooks:
   ApplicationStart:
-    - location: deploy-scripts/Serverrestart.sh
+    - location: /Serverrestart.sh
       timeout: 300
