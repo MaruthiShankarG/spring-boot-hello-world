@@ -7,11 +7,9 @@ phases:
     commands:
       - echo "Installing JDK 11"  # Replace with actual JDK installation commands if necessary
       - echo "Setting JDK 11 as default"
-      - mvn install  # Command to build the Maven project and generate artifacts
+      - mvn package  # Command to build the Maven project and generate artifacts
 
 artifacts:
   files:
-    - '**/*.jar'  # Include all JAR files produced by Maven as artifacts
-    - appspec.yml
-    - 'Deploy_files/**/*'
+    - '**/*'  # Include all JAR files produced by Maven as artifacts
   name: java-app-build  # Name for the build artifact
