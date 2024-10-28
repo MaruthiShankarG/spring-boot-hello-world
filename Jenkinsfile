@@ -4,17 +4,30 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'javac HelloWorldApplication.java'
+                script {
+                    if (fileExists('pom.xml')) {
+                        sh 'mvn clean install'
+                    } else {
+                        echo 'No Maven project found'
+                    }
+                }
             }
         }
         stage('Test') {
             steps {
-                sh 'java HelloWorldApplication'
+                sh 'mvn test'
             }
         }
-        stage('Deploy') {
+        stage('Build Docker Image') {
             steps {
-                echo 'Deploying...'
+                script {
+                    docker.build("your-docker-repo/java-hello-world:latest")
+                }
+            }
+        }
+        stage('Deploy to Kubernetes') {
+            steps {
+                kubernetesDeploy(configs: 'deployment.yaml', enableConfigSubstitution: true)
             }
         }
     }
