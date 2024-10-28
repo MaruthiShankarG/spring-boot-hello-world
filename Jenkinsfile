@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'javac HelloWorld.java'
+                sh 'javac HelloWorldApplication.java'
             }
         }
         stage('Test') {
             steps {
-                sh 'java HelloWorld'
+                sh 'java HelloWorldApplication'
             }
         }
         stage('Deploy') {
